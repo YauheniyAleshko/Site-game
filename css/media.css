@@ -79,6 +79,10 @@
     width: 60%;
   }
 
+  .modal .modal-content{
+    width: 100%;
+  }
+
 }
 
 @media(max-width:666px){
