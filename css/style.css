@@ -1,0 +1,308 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  font-size: 42px;
+  margin:50px 0 50px 0;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size: 36px;
+  margin:30px 0px;
+  color: rgb(218, 60, 86);
+}
+
+.m-top{
+  margin-top: 50px;
+}
+
+.p-top{
+  padding-top: 50px;
+}
+
+.back,.front{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.header{
+  background: linear-gradient(#8c9290, black);
+}
+
+.header__top{
+  font-size: 36px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.header__nav{
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.header__nav li{
+  padding: 5px 10px;
+}
+
+.header__nav li:hover{
+  cursor: pointer;
+}
+
+.header__nav li:not(:last-child){
+  margin-right: 100px;
+}
+
+.header__nav a{
+  color: yellow;
+  text-decoration: none;
+  letter-spacing: .1em;
+  transition: text-shadow .3s;
+}
+
+.header__nav a:hover{
+  text-shadow: 2px 1px 2px yellow, 0 0 1em yellow;
+}
+
+.greeting{
+  padding-bottom: 50px;
+}
+
+.greeting__text{
+  text-align: justify;
+}
+
+.footer{
+  background: linear-gradient(#8c9290, black);
+  padding-bottom: 20px;
+}
+
+.footer__wrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__wrap ul{
+  list-style: none;
+}
+
+.footer__wrap ul a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer__nav li:not(:last-child),.footer-contacts li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer__copyright{
+  color: yellow;
+  text-align: center;
+}
+
+.footer-contacts li{
+  display: flex;
+}
+
+.footer-contacts img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.footer__copyright span{
+  display:block;
+}
+
+.play{
+  background-color: rgb(248, 248, 97);
+}
+
+.play .container{
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  width: 40%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.play .container div{
+  margin: 10px auto;
+}
+
+.play__card{
+  width:calc(25% - 20px);
+  height:calc(25% - 20px) ;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: aqua;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.play__card.flip{
+  transform:rotateY(180deg)
+}
+
+.front{
+  transform: rotateY(180deg);
+}
+
+.modal{
+  font-family: "Colibri";
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  left:0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(../images/confeti.png);
+}
+
+.modal .modal-content {
+  background-color: rgba(0,0,0,0.8);
+  margin: 10px auto;
+  padding: 20px;
+  border: 3px solid #FFFFFF;
+  width: 50%;
+  height:80%;
+  z-index: 9999;
+  border-radius: 20px;
+}
+
+.modal .modal-content .close_modal_window{
+  color: #aaa;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30px;
+  margin-left: auto;
+}
+
+.modal_title{
+  font-size: 42px;
+  font-weight: bold;
+  color: gold;
+  text-align: center;
+}
+
+.modal__steps{
+  color: yellow;
+  font-size: 52px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal_block-buttons{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal_block-buttons a{
+  background-color: aqua;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+.salut{
+  animation-name: salut;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes salut{0%{opacity: 1;}20%{opacity: 0.3;}40%{opacity: 1;}50%{opacity: 0.3;}100%{opacity: 1;}}
+
+.manual__wrap-Bill{
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.manual__Bill-text,.aboutUs__text{
+  font-size: 24px;
+  line-height: 1.5;
+  width: 80%;
+}
+
+.manual__picture{
+  width: 10vw;
+  display: block;
+  margin-left: 30px;
+}
+
+.manual__step{
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.aboutUs__text{
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*burger menu*/
+
+.popup{
+  display: none;
+}
+
+.hamb{
+  display: none;
+}
+
+.header__nav-burger{
+  padding: 50px;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav-burger a{
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(218, 60, 86);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav-burger a:hover{
+  background-color: rgba(245, 245, 240, 0.1);
+}
+
+.header__nav-burger li:not(:last-child){
+  margin-bottom: 20px;
+}
